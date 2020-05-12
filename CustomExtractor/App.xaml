@@ -3,7 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:CustomExtractor"
              StartupUri="MainWindow.xaml">
+    <!--Global resources file, includes of Specialized dictionaries are defined below-->
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--The ImageDictionary-->
+                <ResourceDictionary Source="ResourceDictionaries\ImageDictionary.xaml"/>
+
+                <!--The StringDictionary-->
+                <ResourceDictionary Source="ResourceDictionaries\StringDictionary.xaml"/>
+                
+                <!--The ControlTemplates-->
+                <ResourceDictionary Source="ResourceDictionaries\ControlTemplates.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <!--Control templates under here as they cannot be outside app.xaml-->
+            <ControlTemplate x:Key="BrowseCanvas" TargetType="Control">
+                <Canvas>
+                    <TextBox Name="ExportPath_TB" Canvas.Top="50" Canvas.Left="50" Width="500" Height="25" VerticalContentAlignment="Center"/>
+                    <Button Name="Browse_Button" Content="Browse..." Canvas.Top="80" Canvas.Left="520" Width="70" Height="25"/>
+                </Canvas>
+            </ControlTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

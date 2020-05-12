@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomExtractor"
         mc:Ignorable="d"
-        Title="Red_Salmon Extractor" Height="450" Width="800">
+        Title="CustomExtractor" Height="450" Width="800"
+        Icon="{StaticResource Icon}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="140"/>
@@ -19,46 +20,42 @@
 
         <!--Grid Row 0-->
         <!--Rectangle Grid.Row="0" Fill="LightGray"/-->
-        <Image Name="Logo_Image" Grid.Column="0" Grid.Row="0">
-            <Image.Source>
-                <BitmapImage UriSource="/Res/Images/Icon.png"/>
-            </Image.Source>
-        </Image>
-        <TextBlock Text="This is the TITLE" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Padding="10" FontSize="40"/>
+        <Image Name="Logo_Image" Grid.Column="0" Grid.Row="0" Source="{StaticResource Icon}" />
+        <TextBlock Text="{StaticResource App_Name}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Padding="10" FontSize="40"/>
 
         <!--Grid Row 1, column 0-->
-        <Border Grid.Column="0" Grid.Row="1" BorderThickness="3" BorderBrush="LightGray">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                </Grid.RowDefinitions>
-                <TextBlock Text="• Customize" Grid.Row="0" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
-                <TextBlock Text="• Extract" Grid.Row="1" VerticalAlignment="Center" Padding="10"/>
-                <TextBlock Text="• Finish" Grid.Row="2" VerticalAlignment="Center" Padding="10"/>
-            </Grid>
-        </Border>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="• Customize" Grid.Row="0" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
+            <TextBlock Text="• Extract" Grid.Row="1" VerticalAlignment="Center" Padding="10"/>
+            <TextBlock Text="• Finish" Grid.Row="2" VerticalAlignment="Center" Padding="10"/>
+        </Grid>
 
         <!--Grid Row 1, column 1-->
-        <Canvas Grid.Column="1" Grid.Row="1">
+        <ContentControl Grid.Row="1" Grid.Column="1" Template="{StaticResource BrowseCanvas}"/>
+        <!--Canvas Grid.Column="1" Grid.Row="1">
             <TextBox Name="ExportPath_TB" Canvas.Top="50" Canvas.Left="50" Width="500" Height="25" VerticalContentAlignment="Center"/>
             <Button Name="Browse_Button" Content="Browse..." Canvas.Top="80" Canvas.Left="520" Width="70" Height="25"/>
-        </Canvas>
+        </-->
         
+        <!--Grid Row 2, column span-->
+        <Rectangle Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Top" Width="auto" Height="1" Fill="Gray"/>
+
         <!--Grid Row 2, column 1-->
-        <Border Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" BorderThickness="3" BorderBrush="LightGray">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-                <Button Name="Back_Button" Grid.Column="0" Content="Back" Width="100" Height="25" Margin="20"/>
-                <Button Name="Next_Button" Grid.Column="1" Content="Next" Width="100" Height="25" Margin="20"/>
-                <Button Name="Cancel_Button" Grid.Column="2" Content="Cancel" Width="100" Height="25" Margin="20"/>
-            </Grid>
-        </Border>
+        <Grid Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="Back_Button" Grid.Column="0" Content="Back" Width="100" Height="25" Margin="20"/>
+            <Button Name="Next_Button" Grid.Column="1" Content="Next" Width="100" Height="25" Margin="20"/>
+            <Button Name="Cancel_Button" Grid.Column="2" Content="Cancel" Width="100" Height="25" Margin="20"/>
+        </Grid>
         <!--Button Name="Def_Button" Content="Def_Button" Grid.Column="1" Grid.Row="1" Click="Def_Button_Click"/-->
         <!--TextBox Name="Def_TexBox" Grid.Column="2" Grid.Row="2"/-->
     </Grid>

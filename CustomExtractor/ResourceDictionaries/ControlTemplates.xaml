@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CustomExtractor">
+    <!--Contains all control templates that are -->
+    <ControlTemplate x:Key="BrowseCanvas" TargetType="Control">
+        <Canvas>
+            <TextBox Name="ExportPath_TB" Canvas.Top="50" Canvas.Left="50" Width="500" Height="25" VerticalContentAlignment="Center"/>
+            <Button Name="Browse_Button" Content="Browse..." Canvas.Top="80" Canvas.Left="520" Width="70" Height="25"/>
+        </Canvas>
+    </ControlTemplate>
+</ResourceDictionary>
