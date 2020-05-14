@@ -36,7 +36,9 @@
         </Grid>
 
         <!--Grid Row 1, column 1-->
-        <ContentControl Grid.Row="1" Grid.Column="1" Template="{StaticResource BrowseCanvas}"/>
+        <Frame Name="ContentFrame" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+        <!--ContentControl Grid.Row="1" Grid.Column="1" Template="{StaticResource BrowseCanvas}"/-->
+        <!--" ContentControl Grid.Row="1" Grid.Column="1" Template="{StaticResource ProgressCanvas}"/-->
         <!--Canvas Grid.Column="1" Grid.Row="1">
             <TextBox Name="ExportPath_TB" Canvas.Top="50" Canvas.Left="50" Width="500" Height="25" VerticalContentAlignment="Center"/>
             <Button Name="Browse_Button" Content="Browse..." Canvas.Top="80" Canvas.Left="520" Width="70" Height="25"/>
@@ -52,9 +54,9 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Button Name="Back_Button" Grid.Column="0" Content="Back" Width="100" Height="25" Margin="20"/>
-            <Button Name="Next_Button" Grid.Column="1" Content="Next" Width="100" Height="25" Margin="20"/>
-            <Button Name="Cancel_Button" Grid.Column="2" Content="Cancel" Width="100" Height="25" Margin="20"/>
+            <Button Name="Back_Button" Grid.Column="0" Content="Back" Width="100" Height="25" Margin="20" Click="Back_Button_Click"/>
+            <Button Name="Extract_Button" Grid.Column="1" Content="Extract!" Width="100" Height="25" Margin="20" Click="Extract_Button_Click"/>
+            <Button Name="Cancel_Button" Grid.Column="2" Content="Cancel" Width="100" Height="25" Margin="20" Click="Cancel_Button_Click"/>
         </Grid>
         <!--Button Name="Def_Button" Content="Def_Button" Grid.Column="1" Grid.Row="1" Click="Def_Button_Click"/-->
         <!--TextBox Name="Def_TexBox" Grid.Column="2" Grid.Row="2"/-->
