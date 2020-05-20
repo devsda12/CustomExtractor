@@ -55,7 +55,7 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <Button Name="Back_Button" Grid.Column="0" Content="Back" Width="100" Height="25" Margin="20" Click="Back_Button_Click"/>
-            <Button Name="Extract_Button" Grid.Column="1" Content="Extract!" Width="100" Height="25" Margin="20" Click="Extract_Button_Click"/>
+            <Button Name="Next_Button" Grid.Column="1" Content="Next" Width="100" Height="25" Margin="20" Click="Next_Button_Click"/>
             <Button Name="Cancel_Button" Grid.Column="2" Content="Cancel" Width="100" Height="25" Margin="20" Click="Cancel_Button_Click"/>
         </Grid>
         <!--Button Name="Def_Button" Content="Def_Button" Grid.Column="1" Grid.Row="1" Click="Def_Button_Click"/-->
