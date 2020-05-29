@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +30,9 @@ namespace CustomExtractor
 
             //Initializing the pages
             pages.Add(new WizPage(new WizPages.BrowsePage()));
-            pages.Add(new WizPage(new WizPages.ProgressPage(), canGoBack: false, canGoForward: false));
+            WizPages.ProgressPage progressPage = new WizPages.ProgressPage();
+            progressPage.ExtractionCompleted += Next_Button_Click;
+            pages.Add(new WizPage(progressPage, canGoBack: false, canGoForward: false));
             pages.Add(new WizPage(new WizPages.ReturnPage(), canGoBack: false));
 
             //Setting the browse as the default appearing page in the contentframe

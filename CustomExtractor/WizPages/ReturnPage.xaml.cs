@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomExtractor.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,11 @@ namespace CustomExtractor.WizPages
         public ReturnPage()
         {
             InitializeComponent();
+        }
+
+        public void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            FinishMessage.Text = ExtractorLogic.Instance.exportResultString;
         }
     }
 }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CustomExtractor.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,6 +23,17 @@ namespace CustomExtractor.WizPages
         public BrowsePage()
         {
             InitializeComponent();
+            ExportPath_TB.Text = Directory.GetCurrentDirectory();
+        }
+
+        private void Browse_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var folderbrowser = new System.Windows.Forms.FolderBrowserDialog();
+            if (folderbrowser.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                ExportPath_TB.Text = folderbrowser.SelectedPath;
+                ExtractorLogic.Instance.exportPath = folderbrowser.SelectedPath;
+            }
         }
     }
 }

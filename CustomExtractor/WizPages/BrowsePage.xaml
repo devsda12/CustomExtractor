@@ -10,6 +10,6 @@
 
     <Canvas>
         <TextBox Name="ExportPath_TB" Canvas.Top="50" Canvas.Left="50" Width="500" Height="25" VerticalContentAlignment="Center"/>
-        <Button Name="Browse_Button" Content="Browse..." Canvas.Top="80" Canvas.Left="520" Width="70" Height="25"/>
+        <Button Name="Browse_Button" Content="Browse..." Canvas.Top="80" Canvas.Left="520" Width="70" Height="25" Click="Browse_Button_Click"/>
     </Canvas>
 </Page>

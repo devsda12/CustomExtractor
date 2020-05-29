@@ -4,5 +4,6 @@
                     xmlns:sys="clr-namespace:System;assembly=System.Runtime">
     <!--All the global Strings are stored here-->
     <sys:String x:Key="App_Name">CustomExtractor</sys:String>
-    <sys:String x:Key="Finish_Message">Thank you for using the CustomExtractor, all files have been extracted. You may close this window now.</sys:String>
+    <sys:String x:Key="Finish_Message_Success">Thank you for using the CustomExtractor, all files have been extracted. You may close this window now.</sys:String>
+    <sys:String x:Key="Finish_Message_Failure">An error occured during extraction, please rerun the extractor executable. You may close this window now.</sys:String>
 </ResourceDictionary>

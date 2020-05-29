@@ -6,9 +6,10 @@
       xmlns:local="clr-namespace:CustomExtractor.WizPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ReturnPage">
+      Title="ReturnPage"
+      Loaded="Page_Loaded">
 
     <Canvas>
-        <TextBlock Name="FinishMessage" Canvas.Top="50" Canvas.Left="50" Text="{StaticResource Finish_Message}"/>
+        <TextBlock Name="FinishMessage" Canvas.Top="50" Canvas.Left="50" Text="{DynamicResource Finish_Message_Success}"/>
     </Canvas>
 </Page>
