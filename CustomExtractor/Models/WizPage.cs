@@ -12,6 +12,8 @@ namespace CustomExtractor.Models
     {
         //Custom variables under here
         public Page page;
+        public String pageName;
+        public TextBlock nameBlock;
         public bool canGoBack, canGoForward = true;
 
         //Constructor
