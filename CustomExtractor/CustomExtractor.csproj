@@ -9,10 +9,15 @@
 
   <ItemGroup>
     <None Remove="Res\Images\icon.png" />
+    <None Remove="Res\Payload\Handle.zip" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Res\Images\icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Res\Payload\Handle.zip" />
   </ItemGroup>
 
 </Project>

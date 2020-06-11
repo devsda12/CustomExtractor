@@ -64,14 +64,18 @@ namespace CustomExtractor.WizPages
 
         private void ExtractFile(object sender, DoWorkEventArgs e)
         {
+            //Retrieving the payload from resources
+            Uri uri = new Uri("pack://application:,,,/Res/Payload/payload.zip");
+
+
             for(int i = 0; i < 100; i++)
             {
                 (sender as BackgroundWorker).ReportProgress(i, "Extracting \"...\"");
                 Thread.Sleep(50);
-                if(i == 50)
+                /*if(i == 50)
                 {
                     throw new ExtractorLogic.ExtractionFaultException("A extraction fault appeared");
-                }
+                }*/
             }
         }
     }
